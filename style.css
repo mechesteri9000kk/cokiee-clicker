@@ -1,3 +1,16 @@
+.body {
+  display: flex;
+  flex-direction: row;
+width: 1280px;
+height: 920px;
+ 
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+
+}
+
 .cookie-container {
    display: flex;
     justify-content: left;
@@ -30,5 +43,16 @@
     height: auto;
 }
 
+.cookie-upgrades {
+      display: flex;
+    justify-content: right;
+    background-color: #969696;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.9);
+    width: 600px;
+    height: 920px;
+    flex-direction: column;
+    margin-left: 1280px;
+    margin-top: -920px;
 
+}
 
