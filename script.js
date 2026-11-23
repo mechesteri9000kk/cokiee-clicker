@@ -6,8 +6,9 @@ let autoclickers = 0;
 
 document.getElementById("cookie").addEventListener("click", function(event) {
     cookieCount = cookievärde + cookieCount;
-     document.getElementById("text").innerText = cookieCount;
-       document.getElementById("fel").innerText = "";
+     document.getElementById("Text").innerText = cookieCount;
+       document.getElementById("fel1").innerText = "";
+       document.getElementById("fel2").innerText = "";
   
 });
 
@@ -18,10 +19,10 @@ document.getElementById("upgrade1").addEventListener("click", function(event) {
 if (cookieCount>=25) {
 cookievärde++;
 cookieCount = cookieCount-25;
-document.getElementById("text").innerText = cookieCount;
-  document.getElementById("fel").innerText = "köpt";
+document.getElementById("Text").innerText = cookieCount;
+  document.getElementById("fel1").innerText = "köpt";
 }else{
-    document.getElementById("fel").innerText = "skill issue";
+    document.getElementById("fel1").innerText = "skill issue";
 }
 })
 
@@ -30,24 +31,25 @@ if (cookieCount>=30) {
     cookieCount = cookieCount-30;
     autoclickers++;
 
-    document.getElementById("cookieCount").innerText = cookieCount;
-    
+    document.getElementById("Text").innerText = cookieCount;
+     document.getElementById("fel2").innerText = "köpt";
+      
 
 
     
 }
 else {
-   document.getElementById("fel").innerText = "skill issue"; 
+   document.getElementById("fel2").innerText = "skill issue"; 
 }
 })
-
+document.getElementById("fel2").innerText = "";
 setInterval (function() {
+   
     if (autoclickers > 0) {
         cookieCount = cookieCount + autoclickers;
-        
+        document.getElementById("Text").innerText = cookieCount;
     }
-    
-    
+  
 
 }, 1000);
 
